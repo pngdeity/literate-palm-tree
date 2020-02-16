@@ -1,2 +1,3 @@
 # literate-palm-tree
-Some fun scripts that I had lying around my machine
+Errata that I had lying around my machine<br/>
+Basically, the opposite of clean code
