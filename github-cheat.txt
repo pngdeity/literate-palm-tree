@@ -1,0 +1,51 @@
+﻿Steps to Set-Up HackIllinois GitHub Repo
+
+
+        Create a new directory in your file system
+        Enter your new directory
+        Create a new github repository with git init
+        On GitHub, create a new repository, without adding a README, .gitignore, license, etc.
+        Back on the command line, git add --all
+        then, git commit -m "My commit message"
+        git remote add origin <remote repo url>
+        To verify you did it right, git remote -v
+        git push origin master
+
+
+
+
+Salient Commands
+git branch <branch>                                creates a new local branch
+git branch -d <branch>                                deletes a local branch
+git branch                                        show local branches
+git branch -v                                        show more info about local branches
+git branch -vv                                        show the most info about local branches
+git branch --no-merged                                show branches not merged into current branch
+git branch --no-merged <branch>                        show branches not merged into specified branch
+git checkout                                        gives list of modified & not commited files
+git checkout <branch>                                switch to named, existing local branch, if none exist but a remote branch with the same name exists, then the new branch will automatically track the remote branch of the same name
+git checkout -b <branch>                        create & switch to named local branch
+git checkout --track <remote>/<branch>                switch to a tracking local branch at <remote>/<branch>
+git checkout -b <branch> <remote>/<branch>         same as git checkout --track <remote>/<branch> but with the option to name your local branch differently from the remote
+git clone -o <name> <url>                        clone repo <url> but refer to it as <name>, default name is "origin", hence -o
+git config --global credential.helper cache        cache username & password for a specified amount of time, stored in plaintext in ~/.git_config
+git fetch <remote>                                updates references from remote server known as <remote>
+git fetch --all                                        updates all reference for all remotes
+git log                                                show a commit log
+git log --graph --oneline                        show a handy, terse, graph of commits
+git merge <branch>                                merge committed changes on <branch> into remote configured branch
+git merge --abort                                abort the current merge, used when there are merge conflicts
+git merge --continue                                after fixing merge conflicts, run this
+git pull                                        git fetch followed by git merge, for the current branch
+git push <remote> <branch>                        replace remote refs with local refs of <branch> on server <remote>
+git push <remote> <branch0>:<branch1>                replace remote refs on server <remote> of remote  branch <branch1> with local refs of local branch <branch0> 
+git push <remote> --delete <branch>                delete remote branch on server <remote>
+git remote -v                                        show remotes and their respective URLs        
+git remote show <remote>                        show handy info about named remote
+git remote add <name> <url>                        add a remote server named <name> at URL <url>, imagine you forked a project & are also a contributor to it...
+git stash                                        Create a temporary "save point" for non-commit-worthy work in a branch, used before switching to another branch perhaps
+git stash apply                                        Restore the top of the stash stack on your branch
+git stash drop                                        Delete the most recent stash from the stash stack
+git stash list                                        List all saved stashes
+git stash pop                                        Apply and then remove the stash at the top of stash stack
+git status                                        show added,committed working files
